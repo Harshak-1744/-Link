@@ -1,0 +1,120 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark-mode {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  transition: background-color 0.3s;
+}
+body.dark-mode .container {
+  background-color: #34495e;
+}
+.font-name {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #3498db;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+.font-control {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+input[type="text"] {
+  flex-grow: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #27ae60;
+}
+.font-display {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s;
+}
+body.dark-mode .font-display {
+  background-color: #2c3e50;
+  border-color: #34495e;
+}
+.user-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  min-height: 100px;
+}
+.font-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.font-options label {
+  display: flex;
+  align-items: center;
+}
+input[type="range"] {
+  width: 200px;
+}
+#fontPairing {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #7f8c8d;
+}
+.export-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.font-samples {
+  border-top: 2px solid #3498db;
+  padding-top: 2rem;
+}
+.font-samples h1,
+.font-samples h2,
+.font-samples h3,
+.font-samples h4,
+.font-samples h5,
+.font-samples h6 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.font-samples p,
+.font-samples blockquote,
+.font-samples ul,
+.font-samples ol {
+  margin-bottom: 1rem;
+}

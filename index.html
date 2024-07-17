@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipi_Link</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="font-name" id="fontName"></div>
+        <div class="font-control">
+            <input type="text" id="textInput" placeholder="Type your text here">
+            <button id="updateButton">Change Font</button>
+        </div>
+        <div class="font-display">
+            <div class="user-text" id="fontSample"></div>
+        </div>
+        <div class="font-options">
+            <label for="fontSize">Font Size: <span id="fontSizeValue">18</span>px</label>
+            <input type="range" id="fontSize" min="12" max="72" value="18">
+            <label for="fontColor">Font Color:</label>
+            <input type="color" id="fontColor" value="#333333">
+            <button id="toggleBackground">Toggle Background</button>
+        </div>
+        <div id="fontPairing"></div>
+        <div class="export-options">
+            <button id="exportCSS">Export CSS</button>
+            <button id="shareLink">Share Link</button>
+        </div>
+        <div class="font-samples">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>This is a paragraph. It demonstrates how body text looks in this font.</p>
+            <a href="#">This is a link</a>
+            <blockquote>This is a blockquote to show emphasized text.</blockquote>
+            <ul>
+                <li>Unordered list item 1</li>
+                <li>Unordered list item 2</li>
+            </ul>
+            <ol>
+                <li>Ordered list item 1</li>
+                <li>Ordered list item 2</li>
+            </ol>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
