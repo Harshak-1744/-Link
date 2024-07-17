@@ -45,5 +45,5 @@ If you encounter any issues or have suggestions for improvement, please open an 
 **Project Links**
 ---------------
 
-* **Live Demo**: [https://your-username.github.io/లిపిLink](https://your-username.github.io/లిపిLink)
+* **Live Demo**: [Yet to implement]()
 * **GitHub Repository**: [https://github.com/your-username/Lipi_Link](https://github.com/Harshak-1744/Lipi_Link.git)
