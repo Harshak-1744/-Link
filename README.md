@@ -14,7 +14,7 @@ An interactive font showcase application that allows users to preview and custom
 **Getting Started**
 -------------------
 
-1. Clone the repository: ``
+1. Clone the repository: `https://github.com/Harshak-1744/Lipi_Link.git`
 2. Open the project in your preferred code editor or IDE.
 3. Run the application by opening the `index.html` file in a web browser.
 
@@ -46,4 +46,4 @@ If you encounter any issues or have suggestions for improvement, please open an 
 ---------------
 
 * **Live Demo**: [https://your-username.github.io/లిపిLink](https://your-username.github.io/లిపిLink)
-* **GitHub Repository**: [https://github.com/your-username/లిపిLink](https://github.com/your-username/లిపిLink)
+* **GitHub Repository**: [https://github.com/your-username/Lipi_Link](https://github.com/Harshak-1744/Lipi_Link.git)
