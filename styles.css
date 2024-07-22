@@ -130,10 +130,34 @@ input[type="range"] {
   margin-bottom: 1rem;
 }
 
-body.dark-mode a {
-  color: #3498db; 
+.sample-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
 }
 
-body.dark-mode a:hover {
-  color: #2980b9; 
+.sample-link:hover {
+    background-color: #2980b9;
+}
+
+body.dark-mode .sample-link {
+    background-color: #f39c12;
+    color: #2c3e50;
+}
+
+body.dark-mode .sample-link:hover {
+    background-color: #f1c40f;
+}
+
+body.dark-mode a:not(.sample-link) {
+    color: #3498db;
+}
+
+body.dark-mode a:not(.sample-link):hover {
+    color: #2980b9;
 }
