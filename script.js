@@ -82,19 +82,7 @@ function exportCSS() {
     alert('Copy this CSS:\n\n' + css);
 }
 
-function shareLink() {
-    const fontFamily = encodeURIComponent(currentFont);
-    const fontSize = document.getElementById('fontSize').value;
-    const fontColor = encodeURIComponent(document.getElementById('fontColor').value);
-    const text = encodeURIComponent(document.getElementById('textInput').value);
-    
-    const url = `${window.location.href}?font=${fontFamily}&size=${fontSize}&color=${fontColor}&text=${text}`;
-    
-    alert('Share this link:\n\n' + url);
-}
-
 function suggestFontPairing(currentFont) {
-    // This is a simple suggestion mechanism. You might want to expand this with more sophisticated pairings.
     const pairings = {
         'Roboto': 'Oswald',
         'Open Sans': 'Lato',
@@ -116,20 +104,6 @@ document.getElementById('fontSize').addEventListener('input', updateFontSize);
 document.getElementById('fontColor').addEventListener('input', updateFontColor);
 document.getElementById('toggleBackground').addEventListener('click', toggleBackground);
 document.getElementById('exportCSS').addEventListener('click', exportCSS);
-document.getElementById('shareLink').addEventListener('click', shareLink);
 
 // Initial setup
 changeFont();
-
-// Check for shared link parameters
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.has('font')) {
-    currentFont = decodeURIComponent(urlParams.get('font'));
-    document.getElementById('fontSize').value = urlParams.get('size');
-    document.getElementById('fontColor').value = decodeURIComponent(urlParams.get('color'));
-    document.getElementById('textInput').value = decodeURIComponent(urlParams.get('text'));
-    updateFontDisplay();
-    updateTextDisplay();
-    updateFontSize({target: document.getElementById('fontSize')});
-    updateFontColor({target: document.getElementById('fontColor')});
-}
