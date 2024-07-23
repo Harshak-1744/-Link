@@ -23,7 +23,7 @@ An interactive font showcase application that allows users to preview and custom
 
 * HTML5
 * CSS3
-* JavaScript (ES6+ syntax)
+* JavaScript 
 
 
 **Contributing**
