@@ -1,29 +1,33 @@
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f0f4f8;
-  margin: 0;
-  padding: 20px;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
+:root {
+  --font-primary: "Arial", sans-serif;
+  --color-bg-light: #f0f4f8;
+  --color-bg-dark: #2c3e50;
+  --color-text-light: #333;
+  --color-text-dark: #ecf0f1;
+  --color-primary: #3498db;
+  --color-secondary: #2ecc71;
+  --color-secondary-hover: #27ae60;
+  --border-radius: 8px;
+  --transition-duration: 0.3s;
 }
 
-body.dark-mode {
-  background-color: #2c3e50;
-  color: #ecf0f1;
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  margin: 0;
+  padding: 20px;
+  transition: background-color var(--transition-duration), color var(--transition-duration);
 }
 
 .container {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   margin: 0 auto;
-  transition: background-color 0.3s;
-}
-
-body.dark-mode .container {
-  background-color: #34495e;
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-duration);
 }
 
 .font-name {
@@ -31,9 +35,9 @@ body.dark-mode .container {
   text-align: center;
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: #3498db;
+  background-color: var(--color-primary);
   color: white;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 
 .font-control {
@@ -47,34 +51,30 @@ input[type="text"] {
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: calc(var(--border-radius) / 2);
 }
 
 button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color: #2ecc71;
+  background-color: var(--color-secondary);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: calc(var(--border-radius) / 2);
   cursor: pointer;
+  transition: background-color var(--transition-duration);
 }
 
 button:hover {
-  background-color: #27ae60;
+  background-color: var(--color-secondary-hover);
 }
 
 .font-display {
   background-color: #f8f9fa;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 1rem;
   margin-bottom: 2rem;
-}
-
-body.dark-mode .font-display {
-  background-color: #2c3e50;
-  border-color: #34495e;
 }
 
 .user-text {
@@ -109,7 +109,7 @@ input[type="range"] {
 }
 
 .font-samples {
-  border-top: 2px solid #3498db;
+  border-top: 2px solid var(--color-primary);
   padding-top: 2rem;
 }
 
@@ -119,8 +119,7 @@ input[type="range"] {
 .font-samples h4,
 .font-samples h5,
 .font-samples h6 {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .font-samples p,
@@ -128,4 +127,30 @@ input[type="range"] {
 .font-samples ul,
 .font-samples ol {
   margin-bottom: 1rem;
+}
+
+body.dark-mode {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+body.dark-mode .container {
+  background-color: #34495e;
+}
+
+body.dark-mode .font-display {
+  background-color: var(--color-bg-dark);
+  border-color: #34495e;
+}
+
+@media (max-width: 600px) {
+  .font-control,
+  .font-options,
+  .export-options {
+    flex-direction: column;
+  }
+
+  input[type="range"] {
+    width: 100%;
+  }
 }
